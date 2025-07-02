@@ -22,7 +22,7 @@ form {
 
 .main-card button {
   position: relative;
-  left: -45px;
+  left: -42px;
   top: -13px;
 }
 
@@ -39,4 +39,5 @@ form {
 
 .favorites img {
   width: 150px;
+  height: 150px;
 }

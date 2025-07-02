@@ -45,4 +45,4 @@ const AnimalForm = ({ updateMainAnimal }) => {
   );
 }
 
-  export default AnimalForm
+export default AnimalForm
