@@ -20,6 +20,14 @@ form {
   margin-bottom: 20px;
 }
 
+.main-card img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  /* border: 5px solid rgb(55, 136, 241); */
+}
+
+
 .main-card button {
   position: relative;
   left: -42px;
@@ -37,7 +45,8 @@ form {
   list-style: none;
 }
 
-.favorites img {
+.favorites li img {
   width: 150px;
   height: 150px;
+  object-fit: cover;
 }

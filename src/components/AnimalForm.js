@@ -17,6 +17,7 @@ const AnimalForm = ({ updateMainAnimal }) => {
     }
   }
 
+  
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -26,8 +27,9 @@ const AnimalForm = ({ updateMainAnimal }) => {
     }
 
     setErrorMessage('');
-    updateMainAnimal();
+    updateMainAnimal(value);
   }
+
 
   return (
     <form onSubmit={handleSubmit}>

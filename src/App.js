@@ -23,7 +23,7 @@ const OPEN_API_DOMAIN = 'https://cataas.com';
 const fetchCat = async (text) => {
   console.log('fetchCat() 함수 실행');
 
-  const response = await fetch(`${OPEN_API_DOMAIN}/cat/says/${text}?json=true`);
+  const response = await fetch(`${OPEN_API_DOMAIN}/cat/says/${text}?width=400&height=400&json=true`);
   const responseJson = await response.json();
 
   return responseJson.url;
@@ -55,8 +55,8 @@ function App() {
     });
   }
 
-  async function updateMainAnimal() {
-    const catImage = await fetchCat('hihi');
+  async function updateMainAnimal(text) {
+    const catImage = await fetchCat(text);
 
     setMainAnimal(catImage);
     incrementCount();
@@ -75,7 +75,8 @@ function App() {
   return (
     <div>
       <PageTitle>💛💙{count} 페이지 💙💛</PageTitle>
-      <AnimalForm updateMainAnimal={updateMainAnimal} />
+      <AnimalForm 
+      updateMainAnimal={updateMainAnimal}/>
       <MainCard
         src={mainAnimal}
         alt="아기 곰"
